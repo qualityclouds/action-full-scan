@@ -9,7 +9,7 @@ async function run() {
         let currentRunnerID = process.env.GITHUB_RUN_ID;
         let repoName = process.env.GITHUB_REPOSITORY;
         let token = core.getInput('token');
-        let docker_name = "qualityclouds/salesforce-pipeline";
+        let docker_name = "qualityclouds/pipeline-salesforce";
        
 
         console.log('starting the program');
@@ -17,7 +17,7 @@ async function run() {
 
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/code/:rw --network="host" -t ${docker_name} sf_scan`);
+        let command = (`docker run --user root -v ${workspace}:/code/:rw --network="host" -t ${docker_name} -e QC_API_KEY=${token} -e ISSUES_THRESHOLD=0 -e TECHDEBT_THRESHOLD=0 -e SEVERITY_THRESHOLD=1 -e diff_mode="1" sf_scan`);
 
 
         try {
