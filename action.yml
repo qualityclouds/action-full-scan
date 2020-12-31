@@ -1,0 +1,12 @@
+name: 'Quality Clouds Scan'
+description: 'Quality Clouds Scan'
+branding:
+  icon: 'cloud'
+  color: 'blue'
+inputs:
+  token:
+    description: 'You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
