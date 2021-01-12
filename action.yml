@@ -1,5 +1,5 @@
-name: 'Quality Clouds Scan'
-description: 'Quality Clouds Scan'
+name: 'Quality Clouds Build Check for Salesforce'
+description: 'Quality Clouds Build Check for Salesforce'
 branding:
   icon: 'cloud'
   color: 'blue'
