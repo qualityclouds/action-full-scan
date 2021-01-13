@@ -17,7 +17,7 @@ async function run() {
 
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" -e QC_API_KEY=${token} -e diff_mode="0" -t ${docker_name} sf-scan`);
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" -e QC_API_KEY=${token} -e diff_mode="1" -t ${docker_name} sf-scan`);
 
 
         try {
