@@ -7,6 +7,12 @@ inputs:
   token:
     description: 'You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked'
     required: true
+  mode:
+    description: 'Use cloud mode to runh a Feature branch scan'
+    required: false
+  url_id:
+    description: 'The instance Id. Required when cloud mode is enabled.'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
