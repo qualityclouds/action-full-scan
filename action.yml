@@ -13,6 +13,9 @@ inputs:
   url_id:
     description: 'The instance Id. Required when cloud mode is enabled.'
     required: false
+  api_url:
+    description: 'Use cloud mode to runh a Feature branch scan'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
