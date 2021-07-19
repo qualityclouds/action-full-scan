@@ -1,6 +1,6 @@
 {
   "name": "action-full-scan",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Qualityclouds full scan action",
   "main": "index.js",
   "scripts": {

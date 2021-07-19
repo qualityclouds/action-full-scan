@@ -22,9 +22,12 @@ async function run() {
         if(mode == null) mode = "local";
 
         let operation = "PUSH";
+        let headRef = process.env.GITHUB_HEAD_REF;
         let baseRef = process.env.GITHUB_BASE_REF;
-        if(baseRef != null && baseRef != ""){
-          operation = "PR";
+        if(headRef != null && headRef != ""){
+            console.log('base :' + baseRef + ' head :' + headRef);
+            operation = "PR";
+            branch = headRef.replace("refs/heads/", "")
         }
 
         console.log('starting the scan');
