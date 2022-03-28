@@ -14,18 +14,7 @@ To obtain an API key, contact your Quality Clouds admin. If you're an admin, che
 ```
 steps:
   - name: Quality Clouds Build Check for Salesforce
-    uses: qualityclouds/action-full-scan@v0.0.1
+    uses: qualityclouds/action-full-scan@v1.0.0
     with:
       token: 'your-token'
-```
-
-## Feature Branch scan: Example usage
-```
-steps:
-  - name: Quality Clouds Build Check for Salesforce
-    uses: qualityclouds/action-full-scan@v0.0.1
-    with:
-      token: 'your-token'
-      url_id: your-instance-id
-      mode: cloud
 ```
