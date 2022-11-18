@@ -1044,6 +1044,9 @@ async function run() {
 
         if(mode == null) mode = "local";
 
+        let version = core.getInput('version');
+        if(version == null) version = "latest";
+
         let operation = "PUSH";
         let headRef = process.env.GITHUB_HEAD_REF;
         let baseRef = process.env.GITHUB_BASE_REF;
@@ -1061,7 +1064,7 @@ async function run() {
 
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -t ${docker_name} sf-scan`);
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -t ${docker_name}:${version} sf-scan`);
 
 
         try {

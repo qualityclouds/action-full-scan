@@ -16,6 +16,9 @@ inputs:
   api_url:
     description: 'Use cloud mode to runh a Feature branch scan'
     required: false
+  version:
+    description: 'Customize runner version'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
