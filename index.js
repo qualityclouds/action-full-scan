@@ -15,6 +15,8 @@ async function run() {
         let docker_name = "qualityclouds/pipeline-salesforce";
         let api_url = core.getInput('api_url');
         let api_url_param= "";
+        let reporter="";
+        let gitHubToken = process.env.GITHUB_TOKEN;
         if(api_url != null && api_url != "") api_url_param = `-e API_URL=${api_url}`;
        
         let branch = ref.replace("refs/heads/", "")
@@ -30,8 +32,16 @@ async function run() {
         if(headRef != null && headRef != ""){
             console.log('base :' + baseRef + ' head :' + headRef);
             operation = "PR";
+            reporter = "github-pr-check";
             branch = headRef.replace("refs/heads/", "")
         }
+
+        const fs = require('fs');
+        const eventPath = process.env.GITHUB_EVENT_PATH;
+
+        const eventData = JSON.parse(fs.readFileSync(eventPath, 'utf8'));
+
+        const pullNumber = eventData.pull_request?.number;
 
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
@@ -41,7 +51,18 @@ async function run() {
 
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -t ${docker_name}:${version} sf-scan`);
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} 
+                -e REPO_URL=${repoUrl} 
+                -e QC_API_KEY=${token} 
+                -e diff_mode="1" 
+                -e MODE=${mode} 
+                -e URL_ID=${url_id} 
+                -e BRANCH=${branch} 
+                -e OPERATION=${operation} 
+                -e PR_NUMBER=${pullNumber}
+                -e REPORTER=${reporter}
+                -e REPORTER_TOKEN=${gitHubToken}
+                -t ${docker_name}:${version} sf-scan`);
 
 
         try {
