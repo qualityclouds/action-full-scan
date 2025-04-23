@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: QualityClouds
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Quality Clouds Scan
+        uses: qualityclouds/action-full-scan@1.0.1
+        with:
+          mode: cloud
+          token: ${{ secrets.QC_TOKEN }}
+          review: True #optional. if true, scan will create a pull request review with inline comments with the issues
+          allIssues: True #optional. default false. If true, scan will show blockers and no blocker issues
+          version: latest
