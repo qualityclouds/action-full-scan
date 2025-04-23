@@ -43,6 +43,9 @@ async function run() {
 
         const pullNumber = eventData.pull_request?.number;
 
+        const review = core.getInput('review');
+        const allIssues = core.getInput('allIssues');
+
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
         console.log('mode :' + mode);
@@ -62,6 +65,9 @@ async function run() {
                 -e PR_NUMBER=${pullNumber}
                 -e REPORTER=${reporter}
                 -e REPORTER_TOKEN=${gitHubToken}
+                -e REVIEW=${review}
+                -e ALL_ISSUES=${allIssues}
+                
                 -t ${docker_name}:${version} sf-scan`);
 
 
