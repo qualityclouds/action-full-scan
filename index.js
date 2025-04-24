@@ -51,7 +51,8 @@ async function run() {
         console.log('mode :' + mode);
         console.log('url_id :' + url_id);
         console.log('branch :' + branch);
-
+        console.log('review :' + review);
+        console.log('core.getInput(review) :' + core.getInput('review'));
      
         await exec.exec(`docker pull ${docker_name} -q`);
         let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} 
