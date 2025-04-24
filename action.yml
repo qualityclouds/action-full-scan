@@ -19,6 +19,12 @@ inputs:
   version:
     description: 'Customize runner version'
     required: false
+  review:
+    description: 'Only used if mode == cloud. Boolean. default False. If True, scan will create a pull request review with inline comments with the issues '
+    required: false
+  allIssues:
+    description: 'Only used if mode == cloud. Boolean. default False. If True, scan results will show blockers and no blocker issues'
+    required: false    
 runs:
   using: 'node12'
   main: 'dist/index.js'
