@@ -44,7 +44,8 @@ async function run() {
 
         const review = core.getInput('review');
         const allIssues = core.getInput('allIssues');
-
+        const gitHubToken = core.getInput('gitHubToken');
+        
         console.log('HOLA???');
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
