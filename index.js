@@ -46,6 +46,7 @@ async function run() {
         const review = core.getInput('review');
         const allIssues = core.getInput('allIssues');
 
+        console.log('HOLA???');
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
         console.log('mode :' + mode);
@@ -53,6 +54,7 @@ async function run() {
         console.log('branch :' + branch);
         console.log('review :' + review);
         console.log('core.getInput(review) :' + core.getInput('review'));
+        console.log('ADIOSSS???');
      
         await exec.exec(`docker pull ${docker_name} -q`);
         let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} 
