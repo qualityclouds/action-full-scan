@@ -26,7 +26,7 @@ inputs:
     description: 'Only used if mode == cloud. Boolean. default False. If True, scan results will show blockers and no blocker issues'
     required: false    
   gitHubToken:
-    description: 'Only used if review == True.value=${{ secrets.GITHUB_TOKEN }}' 
+    description: 'Only used if review == True. secrets.GITHUB_TOKEN' 
     required: false
 runs:
   using: 'node12'
