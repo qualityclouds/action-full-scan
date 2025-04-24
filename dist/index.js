@@ -18891,7 +18891,6 @@ async function run() {
                 -e QC_API_KEY=${token} \
                 -e diff_mode="1" \
                 -e MODE=${mode} \
-                -e URL_ID=${url_id} \
                 -e BRANCH=${branch} \
                 -e OPERATION=${operation} \
                 -e PR_NUMBER=${pullNumber} \
