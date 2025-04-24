@@ -18882,7 +18882,7 @@ async function run() {
         console.log('url_id :' + url_id);
         console.log('branch :' + branch);
         console.log('review :' + review);
-        console.log('core.getInput(review) :' + core.getInput('review'));
+        console.log('gitHubToken:' + gitHubToken);
         console.log('ADIOSSS???');
      
         await exec.exec(`docker pull ${docker_name} -q`);
@@ -18897,8 +18897,7 @@ async function run() {
                 -e REPORTER=${reporter} \
                 -e REPORTER_TOKEN=${gitHubToken} \
                 -e REVIEW=${review} \
-                -e ALL_ISSUES=${allIssues} \
-                
+                -e ALL_ISSUES=${allIssues}                 
                 -t ${docker_name}:${version} sf-scan`);
 
 
