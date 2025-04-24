@@ -51,6 +51,8 @@ async function run() {
         console.log('mode :' + mode);
         console.log('url_id :' + url_id);
         console.log('branch :' + branch);
+        console.log('review :' + review);
+        console.log('allIssues :' + allIssues);
 
      
         await exec.exec(`docker pull ${docker_name} -q`);
