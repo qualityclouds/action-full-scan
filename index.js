@@ -57,8 +57,8 @@ async function run() {
         console.log('ADIOSSS???');
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -t ${docker_name}:${version} sf-scan`);
-        
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -t ${docker_name}:${version} sf-scan`);
+
         try {
             await exec.exec(command);
         } catch (err) {
