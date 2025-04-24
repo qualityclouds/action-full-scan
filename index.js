@@ -46,7 +46,6 @@ async function run() {
         const allIssues = core.getInput('allIssues');
         const gitHubToken = core.getInput('gitHubToken');
 
-        console.log('HOLA???');
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
         console.log('mode :' + mode);
@@ -54,7 +53,7 @@ async function run() {
         console.log('branch :' + branch);
         console.log('review :' + review);
         console.log('gitHubToken:' + gitHubToken);
-        console.log('ADIOSSS???');
+        console.log('pullNumber:' + pullNumber);
      
         await exec.exec(`docker pull ${docker_name} -q`);
         let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -t ${docker_name}:${version} sf-scan`);
