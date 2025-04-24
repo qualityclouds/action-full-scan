@@ -18896,8 +18896,8 @@ async function run() {
                 -e PR_NUMBER=${pullNumber} \
                 -e REPORTER=${reporter} \
                 -e REPORTER_TOKEN=${gitHubToken} \
-                -e REVIEW=${review} \
-                -e ALL_ISSUES=${allIssues}                 
+                -e REVIEW=1 \
+                -e ALL_ISSUES=1                 
                 -t ${docker_name}:${version} sf-scan`);
 
 
