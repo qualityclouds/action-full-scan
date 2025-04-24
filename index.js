@@ -57,7 +57,7 @@ async function run() {
         console.log('ADIOSSS???');
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} 
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} \
                 -e REPO_URL=${repoUrl} \
                 -e QC_API_KEY=${token} \
                 -e diff_mode="1" \
