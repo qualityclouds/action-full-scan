@@ -18845,7 +18845,6 @@ async function run() {
         let api_url = core.getInput('api_url');
         let api_url_param= "";
         let reporter="";
-        let gitHubToken = process.env.GITHUB_TOKEN;
         if(api_url != null && api_url != "") api_url_param = `-e API_URL=${api_url}`;
        
         let branch = ref.replace("refs/heads/", "")
