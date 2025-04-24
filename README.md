@@ -21,6 +21,8 @@ To obtain an API key, contact your Quality Clouds admin. If you're an admin, che
 
 **optional** Only used if mode == cloud. Boolean. default false. If true, scan results will show blockers and no blocker issues
 
+### `gitHubToken` 
+**optional** Only used if review == true. Value=  ${{ secrets.GITHUB_TOKEN }}
 
 ## Example usage
 
@@ -32,4 +34,5 @@ steps:
       token: 'your-token'
       mode: cloud
       review: true
+      gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 ```
