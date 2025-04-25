@@ -18876,7 +18876,7 @@ async function run() {
         const githubToken2 = process.env.GITHUB_TOKEN;
 
         console.log('githubToken2: ' + githubToken2);
-        console.log('githubToken:' + githubToken);
+        console.log('githubToken:' + gitHubToken);
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
         console.log('mode :' + mode);
