@@ -16,7 +16,6 @@ async function run() {
         let api_url = core.getInput('api_url');
         let api_url_param= "";
         let reporter="";
-        let gitHubToken = process.env.GITHUB_TOKEN;
         if(api_url != null && api_url != "") api_url_param = `-e API_URL=${api_url}`;
        
         let branch = ref.replace("refs/heads/", "")
@@ -32,7 +31,6 @@ async function run() {
         if(headRef != null && headRef != ""){
             console.log('base :' + baseRef + ' head :' + headRef);
             operation = "PR";
-            reporter = "github-pr-check";
             branch = headRef.replace("refs/heads/", "")
         }
 
@@ -45,34 +43,16 @@ async function run() {
 
         const review = core.getInput('review');
         const allIssues = core.getInput('allIssues');
+        const gitHubToken = core.getInput('gitHubToken');
 
-        console.log('HOLA???');
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
         console.log('mode :' + mode);
         console.log('url_id :' + url_id);
         console.log('branch :' + branch);
-        console.log('review :' + review);
-        console.log('core.getInput(review) :' + core.getInput('review'));
-        console.log('ADIOSSS???');
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} 
-                -e REPO_URL=${repoUrl} 
-                -e QC_API_KEY=${token} 
-                -e diff_mode="1" 
-                -e MODE=${mode} 
-                -e URL_ID=${url_id} 
-                -e BRANCH=${branch} 
-                -e OPERATION=${operation} 
-                -e PR_NUMBER=${pullNumber}
-                -e REPORTER=${reporter}
-                -e REPORTER_TOKEN=${gitHubToken}
-                -e REVIEW=${review}
-                -e ALL_ISSUES=${allIssues}
-                
-                -t ${docker_name}:${version} sf-scan`);
-
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -t ${docker_name}:${version} sf-scan`);
 
         try {
             await exec.exec(command);

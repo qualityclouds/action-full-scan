@@ -30,3 +30,4 @@ jobs:
           review: True #optional. if true, scan will create a pull request review with inline comments with the issues
           allIssues: True #optional. default false. If true, scan will show blockers and no blocker issues
           version: latest
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
