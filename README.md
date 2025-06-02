@@ -9,6 +9,21 @@ Build Check for Salesforce - Github Action enables you to scan your code against
 **Required** You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked. 
 To obtain an API key, contact your Quality Clouds admin. If you're an admin, check the [Administering API keys article](https://docs.qualityclouds.com/qcd/administering-api-keys-31721787.html).
 
+### `mode`
+
+**optional** . Options: local/cloud. Default mode: local. local mode performs a live check of the files. cloud mode runs a scan against the branch of the repository where the action is performed. 
+
+### `review`
+
+**optional** Only used if mode == cloud. Boolean. default false. If true, scan will create a pull request review with inline comments with the issues 
+
+### `allIssues`
+
+**optional** Only used if mode == cloud. Boolean. default false. If true, scan results will show blockers and no blocker issues
+
+### `gitHubToken` 
+**optional** Only used if review == true. Value=  ${{ secrets.GITHUB_TOKEN }}
+
 ## Example usage
 
 ```
@@ -17,4 +32,7 @@ steps:
     uses: qualityclouds/action-full-scan@1.0.0
     with:
       token: 'your-token'
+      mode: cloud
+      review: true
+      gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 ```
