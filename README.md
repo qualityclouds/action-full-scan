@@ -1,6 +1,5 @@
 ﻿<h1>Build Check for Salesforce by Quality Clouds</h1>
-
-BANNER IMATGE
+![BANNER](https://github.com/user-attachments/assets/dbcaa218-1933-481e-aced-31d0a628caa7)
 
 <h2>Built for Salesforce. Designed for GitHub.</h2>
 
