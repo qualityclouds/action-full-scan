@@ -1,5 +1,6 @@
 ﻿<h1>Build Check for Salesforce by Quality Clouds</h1>
-![BANNER](https://github.com/user-attachments/assets/dbcaa218-1933-481e-aced-31d0a628caa7)
+![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
+
 
 <h2>Built for Salesforce. Designed for GitHub.</h2>
 
@@ -15,7 +16,8 @@
 <p>We go beyond generic code checks by scanning platform-specific configurations, metadata, and code against your org’s quality and compliance KPIs.</p>
 <p>Trusted by <strong>Fortune 500 teams</strong>, Quality Clouds helps developers, architects, and release managers catch issues early, enforce standards automatically, and ship with confidence- now directly from GitHub.</p>
 
-VISUAL PARTNERS
+![PARTNERS_CLIENTS LOGOS](https://github.com/user-attachments/assets/d6e4211e-11c8-4974-bb13-62320f6dfcf5)
+
 
 <h2>Why Your Linter Isn’t Enough</h2>
 
@@ -29,8 +31,7 @@ VISUAL PARTNERS
 
 Because clean code isn’t enough. It has to be correct for your environment. </p>
 
-LINTERS VS QC
-
+![LINTERS VS QC](https://github.com/user-attachments/assets/161f0c2a-f4a0-4fde-8d0e-241fff6f2845)
 
 <h2>For Builders and Gatekeepers</h2>
 
