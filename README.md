@@ -1,9 +1,11 @@
 ﻿<h1>Build Check for Salesforce by Quality Clouds</h1>
 
+<h2> 
+  ![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
+</h2>
 
 <h2>Built for Salesforce. Designed for GitHub.</h2>
 
-![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
 
 <p><strong>Quality Clouds Build Check for Salesforce</strong> brings platform-specific governance directly into your GitHub workflow.</p>
 <p>Whether you're managing metadata, enforcing org-wide naming standards, or safeguarding production from non-compliant changes, this GitHub Action delivers instant, actionable insights when a <strong> pull request is opened.</p>
