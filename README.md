@@ -3,7 +3,7 @@
 ![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
 
 1. [Built for Salesforce. Designed for GitHub.](#built-for-salesforce-designed-for-github)
-2. [What Is Quality Clouds?](#what-is-quality-clouds)
+2. [What Is Quality Clouds?](#-what-youll-see-that-others-dont)
 3. [Why Your Linter Isn’t Enough](#why-your-linter-isnt-enough)
 4. [For Builders and Gatekeepers](#for-builders-and-gatekeepers)
 5. [Set It Up Once. Scan Every Pull Request.](#set-it-up-once-scan-every-pull-request)
