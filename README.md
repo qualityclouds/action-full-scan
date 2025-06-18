@@ -57,7 +57,7 @@ This is how quality becomes part of the process, not a blocker at the end.
 
 
 
-<h2>Set It Up Once. Scan Every Pull Request.</h2>
+## Set It Up Once. Scan Every Pull Request.
 
 <ol>
   <li>Install the Quality Clouds Build Check plugin from the GitHub Marketplace</li>
@@ -70,7 +70,7 @@ This is how quality becomes part of the process, not a blocker at the end.
 </p>
 
 
-<h2>Use with Your Existing Quality Clouds License</h2>
+## Use with Your Existing Quality Clouds License
 
 <p>If you already have a Quality Clouds license, you’re ready to go. Just connect your account using your API key and start scanning pull requests right inside GitHub.
 </p>
@@ -123,7 +123,7 @@ This GitHub Action is built to extend the value of your existing platform govern
 EXAMPLE USAGE
 
 
-<h2>🔍 What You’ll See That Others Don’t</h2>
+## 🔍 What You’ll See That Others Don’t
 
 <ul> Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce, not just syntax.
 
@@ -138,7 +138,7 @@ EXAMPLE USAGE
 This is quality governance, not just linting. And it’s built for how Salesforce teams actually work.
 </ul>
 
-<h2>⏱️ Get Started in Under a Minute</h2>
+## ⏱️ Get Started in Under a Minute
 
 <ul>
 1.  Install from the GitHub Marketplace  
@@ -150,7 +150,7 @@ This is quality governance, not just linting. And it’s built for how Salesforc
 That’s it. No tool switching, no complex configuration. Just instant visibility and quality control built into every GitHub workflow
 </ul>
 
-<h2>📞 Need Help?</h2>
+## 📞 Need Help?
 
 <p>We’re here to support you every step of the way. Visit our <a href="https://docs.qualityclouds.com">our documentation</a> for setup, API key management, and advanced configuration options.</p>
 
