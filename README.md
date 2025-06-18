@@ -1,8 +1,19 @@
-<h1>Build Check for Salesforce by Quality Clouds</h1>
 
 
 ![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
 
+1. [Built for Salesforce. Designed for GitHub.](#built-for-salesforce-designed-for-github)
+2. [What Is Quality Clouds?](#what-is-quality-clouds)
+3. [Why Your Linter Isn’t Enough](#why-your-linter-isnt-enough)
+4. [For Builders and Gatekeepers](#for-builders-and-gatekeepers)
+5. [Set It Up Once. Scan Every Pull Request.](#set-it-up-once-scan-every-pull-request)
+6. [Use with Your Existing Quality Clouds License](#use-with-your-existing-quality-clouds-license)
+7. [Configuration Inputs and Options](#configuration-inputs-and-options)
+8. [What You’ll See That Others Don’t](#what-youll-see-that-others-dont)
+9. [Get Started in Under a Minute](#get-started-in-under-a-minute)
+10. [Need Help or Want to Learn More?](#need-help-or-want-to-learn-more)
+
+## Built for Salesforce. Designed for GitHub.
 
 <p><strong>Quality Clouds Build Check for Salesforce</strong> brings platform-specific governance directly into your GitHub workflow.</p>
 <p>Whether you're managing metadata, enforcing org-wide naming standards, or safeguarding production from non-compliant changes, this GitHub Action delivers instant, actionable insights when a <strong> pull request is opened.</p>
@@ -10,7 +21,7 @@
 
 **Because when code lives in GitHub but breaks in production, generic linters aren't enough.**
 
-<h2>What Is Quality Clouds?</h2>
+## What Is Quality Clouds?
 
 <p><strong>Quality Clouds is the AI-powered governance layer</strong> built for enterprise platforms, starting with Salesforce.</p>
 <p>We go beyond generic code checks by scanning platform-specific configurations, metadata, and code against your org’s quality and compliance KPIs.</p>
@@ -19,7 +30,7 @@
 ![PARTNERS_CLIENTS LOGOS](https://github.com/user-attachments/assets/d6e4211e-11c8-4974-bb13-62320f6dfcf5)
 
 
-<h2>Why Your Linter Isn’t Enough</h2>
+## Why Your Linter Isn’t Enough
 
 <p>Most linters catch syntax and formatting issues. But:</p>
 <ul>
@@ -33,7 +44,7 @@ Because clean code isn’t enough. It has to be correct for your environment. </
 
 ![LINTERS VS QC](https://github.com/user-attachments/assets/161f0c2a-f4a0-4fde-8d0e-241fff6f2845)
 
-<h2>For Builders and Gatekeepers</h2>
+## For Builders and Gatekeepers
 
 <h3>For Developers</h3>
 <p>Get <strong>instant feedback</strong> inside GitHub. See what needs fixing, why it matters, and how to resolve it before code review. Reduce back-and-forth, avoid late rework, and improve with every pull request.</p>
