@@ -124,8 +124,10 @@ This GitHub Action is built to extend the value of your existing platform govern
     </tr>    
   </tbody>
 </table>
-```
-# This is a basic workflow to help you get started with Actions   
+
+##Example Usage
+
+```# This is a basic workflow to help you get started with Actions   
 name: QualityClouds
 
 # Controls when the action will run. 
@@ -149,17 +151,16 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Quality Clouds Scan
-        uses: qualityclouds/action-full-scan@feature/QAT-1517
+        uses: qualityclouds/action-full-scan@2.0.0
         with:
           mode: cloud
-          token: ${{ secrets.QC_TOKEN_DEV }}
-          review: True #optional. if true, scan will create a pull request review with inline comments with the issues
-          allIssues: True #optional. default false. If true, scan will show blockers and no blocker issues
-          version: testing
-          api_url: "https://api-staging.qualityclouds.com"
-          gitHubToken: ${{ secrets.QC_GITHUB_TOKEN }}
+          token: 'MyGitQCToken'
+          review: True 
+          allIssues: True 
+          gitHubToken: 'MyGitHubToken'
           pr_fails_on_blockers: True
 ```
+
 
 ## What You’ll See That Others Don’t
 
