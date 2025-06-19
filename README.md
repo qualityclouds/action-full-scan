@@ -95,7 +95,7 @@ This GitHub Action is built to extend the value of your existing platform govern
     <tr>
       <td><code>token</code></td>
       <td>✅ Yes</td>
-      <td>You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked. To obtain an API key, contact your Quality Clouds admin. If you're an admin, check the [Administering API keys article](https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/). 
+      <td>You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked. To obtain an API key, contact your Quality Clouds admin. If you're an admin, check the <a href="https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/">Administering API keys article</a>. 
     </tr>
     <tr>
       <td><code>mode</code></td>
