@@ -11,7 +11,7 @@
 7. [Configuration Inputs and Options](#-configuration-inputs)
 8. [What You’ll See That Others Don’t](#-what-youll-see-that-others-dont)
 9. [Get Started in Under a Minute](#%EF%B8%8F-get-started-in-under-a-minute)
-10. [Need Help or Want to Learn More?](#need-help-or-want-to-learn-more)
+10. [Need Help or Want to Learn More?](#-need-help)
 
 ## Built for Salesforce. Designed for GitHub.
 
