@@ -75,7 +75,7 @@ This is how quality becomes part of the process, not a blocker at the end.
 <p>If you already have a Quality Clouds license, you’re ready to go. Just connect your account using your API key and start scanning pull requests right inside GitHub.
 </p>
 
-<p><strong>New to Quality Clouds?</strong> <a href="https://qualityclouds.com/contact">Reach out to us</a> and we’ll help you get started with the right plan for your team.</p>
+<p><strong>New to Quality Clouds?</strong> <a href="https://marketing.qualityclouds.com/meet-quality-clouds">Reach out to us</a> and we’ll help you get started with the right plan for your team.</p>
 
 This GitHub Action is built to extend the value of your existing platform governance -seamlessly, without switching tools.
 
