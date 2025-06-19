@@ -16,7 +16,7 @@
 ## Built for Salesforce. Designed for GitHub.
 
 <p><strong>Quality Clouds Build Check for Salesforce</strong> brings platform-specific governance directly into your GitHub workflow.</p>
-<p>Whether you're managing metadata, enforcing org-wide naming standards, or safeguarding production from non-compliant changes, this GitHub Action delivers instant, actionable insights when a <strong> pull request is opened.</p>
+<p>Whether you're managing metadata, enforcing org-wide naming standards, or safeguarding production from non-compliant changes, this GitHub Action delivers instant, actionable insights when a <strong> pull request </strong> is opened.</p>
 <p>It’s the ultimate native pull request tool designed specifically for Salesforce teams, <strong>trusted by enterprise architects, release managers, and developers</strong> who care about getting it right before anything ships.</p>
 
 **Because when code lives in GitHub but breaks in production, generic linters aren't enough.**
