@@ -124,9 +124,42 @@ This GitHub Action is built to extend the value of your existing platform govern
     </tr>    
   </tbody>
 </table>
+```
+# This is a basic workflow to help you get started with Actions   
+name: QualityClouds
 
-EXAMPLE USAGE
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+  pull_request:
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Quality Clouds Scan
+        uses: qualityclouds/action-full-scan@feature/QAT-1517
+        with:
+          mode: cloud
+          token: ${{ secrets.QC_TOKEN_DEV }}
+          review: True #optional. if true, scan will create a pull request review with inline comments with the issues
+          allIssues: True #optional. default false. If true, scan will show blockers and no blocker issues
+          version: testing
+          api_url: "https://api-staging.qualityclouds.com"
+          gitHubToken: ${{ secrets.QC_GITHUB_TOKEN }}
+          pr_fails_on_blockers: True
+```
 
 ## What You’ll See That Others Don’t
 
