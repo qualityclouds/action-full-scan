@@ -10,7 +10,7 @@
 6. [Use with Your Existing Quality Clouds License](#use-with-your-existing-quality-clouds-license)
 7. [Configuration Inputs and Options](#-configuration-inputs)
 8. [What You’ll See That Others Don’t](#-what-youll-see-that-others-dont)
-9. [Get Started in Under a Minute](#get-started-in-under-a-minute)
+9. [Get Started in Under a Minute](#%EF%B8%8F-get-started-in-under-a-minute)
 10. [Need Help or Want to Learn More?](#need-help-or-want-to-learn-more)
 
 ## Built for Salesforce. Designed for GitHub.
