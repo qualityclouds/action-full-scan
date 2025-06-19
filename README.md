@@ -125,8 +125,8 @@ EXAMPLE USAGE
 
 ## What You’ll See That Others Don’t
 
-<ul> Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce, not just syntax.
-
+Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce, not just syntax.
+<ul>
   <li><strong>Automated Branch Scans</strong> – Automatically trigger code and configuration scans on every pull request.  
 .</li>
   <li><strong>Integrated Quality Gates</strong> – Enforce your org’s specific compliance and quality rules before merge.  
