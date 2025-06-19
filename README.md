@@ -117,6 +117,11 @@ This GitHub Action is built to extend the value of your existing platform govern
       <td>Optional</td>
       <td>Only used if<code>review</code> is <code>true</code>.</td>
     </tr>
+    <tr>
+      <td><code>pr_fails_on_blockers</code></td>
+      <td>Optional</td>
+      <td>Only used if<code>review</code> is <code>true</code>. Determine if the PR should be marked as failed when the Quality Gate does not pass.</td>
+    </tr>    
   </tbody>
 </table>
 
