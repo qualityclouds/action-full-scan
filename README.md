@@ -140,7 +140,6 @@ This is quality governance, not just linting. And it’s built for how Salesforc
 
 ## Get Started in Under a Minute
 
-<ul>
 1.  Install from the GitHub Marketplace  
      
 2.  Paste your API key in the YAML  
@@ -148,7 +147,6 @@ This is quality governance, not just linting. And it’s built for how Salesforc
 3.  Open a PR and start scanning instantly
 
 That’s it. No tool switching, no complex configuration. Just instant visibility and quality control built into every GitHub workflow
-</ul>
 
 ## Need Help?
 
