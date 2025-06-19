@@ -81,7 +81,7 @@ This GitHub Action is built to extend the value of your existing platform govern
 
 <hr />
 
-<h2>🧾 Configuration Inputs</h2>
+<h2>Configuration Inputs and Options</h2>
 
 <table>
   <thead>
@@ -123,7 +123,7 @@ This GitHub Action is built to extend the value of your existing platform govern
 EXAMPLE USAGE
 
 
-## 🔍 What You’ll See That Others Don’t
+## What You’ll See That Others Don’t
 
 <ul> Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce, not just syntax.
 
@@ -138,7 +138,7 @@ EXAMPLE USAGE
 This is quality governance, not just linting. And it’s built for how Salesforce teams actually work.
 </ul>
 
-## ⏱️ Get Started in Under a Minute
+## Get Started in Under a Minute
 
 <ul>
 1.  Install from the GitHub Marketplace  
@@ -150,7 +150,7 @@ This is quality governance, not just linting. And it’s built for how Salesforc
 That’s it. No tool switching, no complex configuration. Just instant visibility and quality control built into every GitHub workflow
 </ul>
 
-## 📞 Need Help?
+## Need Help?
 
 <p>We’re here to support you every step of the way. Visit our <a href="https://docs.qualityclouds.com">our documentation</a> for setup, API key management, and advanced configuration options.</p>
 
