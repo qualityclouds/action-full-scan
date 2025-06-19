@@ -125,7 +125,7 @@ This GitHub Action is built to extend the value of your existing platform govern
   </tbody>
 </table>
 
-##Example Usage
+## Example Usage
 
 ```# This is a basic workflow to help you get started with Actions   
 name: QualityClouds
