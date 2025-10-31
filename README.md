@@ -193,7 +193,7 @@ That’s it. No tool switching, no complex configuration. Just instant visibilit
 
 <p><strong>Still need support?</strong></p>
 <ul>
-  <li>📧 <a href="mailto:support@qualityclouds.com">support@qualityclouds.com</a></li>
+  <li>📧 <a href="mailto:help@qualityclouds.com">help@qualityclouds.com</a></li>
   <li>💼 <a href="mailto:sales@qualityclouds.com">sales@qualityclouds.com</a></li> 
 </ul>
 
