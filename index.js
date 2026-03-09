@@ -45,6 +45,8 @@ async function run() {
         const allIssues = core.getInput('allIssues');
         const gitHubToken = core.getInput('gitHubToken');
         const pr_fails_on_blockers = core.getInput('pr_fails_on_blockers') == null ? "false" : core.getInput('pr_fails_on_blockers');
+        const zip_path = core.getInput('zip_path');
+        const codequality = core.getInput('codequality') == null ? "false" : core.getInput('codequality');
 
         console.log('starting the scan');
         console.log('github run id :' + currentRunnerID);
@@ -53,7 +55,7 @@ async function run() {
         console.log('branch :' + branch);
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -e PR_FAILS_ON_BLOCKERS=${pr_fails_on_blockers} -t ${docker_name}:${version} sf-scan`);
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -e PR_FAILS_ON_BLOCKERS=${pr_fails_on_blockers} -e ZIP_PATH=${zip_path} -e CODEQUALITY=${codequality} -t ${docker_name}:${version} sf-scan`);
 
         try {
             await exec.exec(command);
