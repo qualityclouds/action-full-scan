@@ -100,8 +100,18 @@ This GitHub Action is built to extend the value of your existing platform govern
     <tr>
       <td><code>mode</code></td>
       <td>Optional</td>
-      <td><code>local</code> (default) or <code>cloud</code>. Local mode performs a live check of the files. Cloud mode runs a scan against the branch of the repository where the action is performed.</td>
+      <td><code>local</code> (default) or <code>cloud</code>. Local mode runs a scan against a given zip file. Cloud mode runs a scan against the branch of the repository where the action is performed.</td>
     </tr>
+    <tr>
+      <td><code>zip_path</code></td>
+      <td>Optional</td>
+      <td>Path to the zip file containing files to scan. Only used in <code>local</code> mode.</td>
+    </tr>
+    <tr>
+      <td><code>codequality</code></td>
+      <td>Optional</td>
+      <td><code>true</code> generates a code quality json with issues (all issues or only blockers depends on allIssues value). Only used in  <code>local</code> mode.</td>
+    </tr>    
     <tr>
       <td><code>review</code></td>
       <td>Optional</td>
