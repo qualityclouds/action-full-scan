@@ -23,7 +23,9 @@ async function run() {
         if(mode == null) mode = "local";
 
         let version = core.getInput('version');
-        if(version == null) version = "latest";
+        if(!version) {
+            version = "latest";
+        }
 
         let operation = "PUSH";
         let headRef = process.env.GITHUB_HEAD_REF;
