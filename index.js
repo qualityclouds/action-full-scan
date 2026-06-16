@@ -12,10 +12,16 @@ async function run() {
         let token = core.getInput('token');
         let mode = core.getInput('mode');
         let url_id = core.getInput('url_id');
-        let docker_name = "qualityclouds/pipeline-salesforce";
         let api_url = core.getInput('api_url');
         let api_url_param= "";
         let reporter="";
+        let service = core.getInput('cloud');
+        const cloud = core.getInput('cloud') == null ? "0" : core.getInput('cloud');
+        const useServiceNow = String(cloud).trim() === "1" || String(cloud).trim().toLowerCase() === "servicenow";
+        const docker_name = useServiceNow
+        ? "qualityclouds/pipeline-servicenow"
+        : "qualityclouds/pipeline-salesforce";
+        
         if(api_url != null && api_url != "") api_url_param = `-e API_URL=${api_url}`;
        
         let branch = ref.replace("refs/heads/", "")
@@ -57,7 +63,10 @@ async function run() {
         console.log('branch :' + branch);
      
         await exec.exec(`docker pull ${docker_name} -q`);
-        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -e PR_FAILS_ON_BLOCKERS=${pr_fails_on_blockers} -e ZIP_PATH=${zip_path} -e CODEQUALITY=${codequality} -t ${docker_name}:${version} sf-scan`);
+ 
+        const scan_command = useServiceNow ? "snow-scan" : "sf-scan";
+        
+        let command = (`docker run --user root -v ${workspace}:/src/:rw --network="host" ${api_url_param} -e REPO_URL=${repoUrl} -e QC_API_KEY=${token} -e diff_mode="1" -e MODE=${mode} -e URL_ID=${url_id} -e BRANCH=${branch} -e OPERATION=${operation} -e PR_NUMBER=${pullNumber} -e REPORTER_TOKEN=${gitHubToken} -e REVIEW=${review} -e ALL_ISSUES=${allIssues} -e PR_FAILS_ON_BLOCKERS=${pr_fails_on_blockers} -e ZIP_PATH=${zip_path} -e CODEQUALITY=${codequality} -t ${docker_name}:${version} ${scan_command}`);
 
         try {
             await exec.exec(command);
