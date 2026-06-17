@@ -1,8 +1,8 @@
 
 
-![BANNER](https://github.com/user-attachments/assets/c5fe2e36-5c2c-4655-a732-27273064042a)
+![BANNER](./build_check_sf_sn_ban.png)
 
-1. [Built for Salesforce. Designed for GitHub.](#built-for-salesforce-designed-for-github)
+1. [Built for Salesforce & ServiceNow. Designed for GitHub.](#built-for-salesforce-&-servicenow-designed-for-github)
 2. [What Is Quality Clouds?](#what-is-quality-clouds)
 3. [Why Your Linter Isn’t Enough](#why-your-linter-isnt-enough)
 4. [For Builders and Gatekeepers](#for-builders-and-gatekeepers)
@@ -13,17 +13,17 @@
 9. [Get Started in Under a Minute](#get-started-in-under-a-minute)
 10. [Need Help or Want to Learn More?](#need-help)
 
-## Built for Salesforce. Designed for GitHub.
+## Built for Salesforce & ServiceNow. Designed for GitHub.
 
-<p><strong>Quality Clouds Build Check for Salesforce</strong> brings platform-specific governance directly into your GitHub workflow.</p>
+<p><strong>Quality Clouds Build Check for Salesforce & ServiceNow</strong> brings platform-specific governance directly into your GitHub workflow.</p>
 <p>Whether you're managing metadata, enforcing org-wide naming standards, or safeguarding production from non-compliant changes, this GitHub Action delivers instant, actionable insights when a <strong> pull request </strong> is opened.</p>
-<p>It’s the ultimate native pull request tool designed specifically for Salesforce teams, <strong>trusted by enterprise architects, release managers, and developers</strong> who care about getting it right before anything ships.</p>
+<p>It’s the ultimate native pull request tool designed specifically for Salesforce & ServiceNow teams, <strong>trusted by enterprise architects, release managers, and developers</strong> who care about getting it right before anything ships.</p>
 
 **Because when code lives in GitHub but breaks in production, generic linters aren't enough.**
 
 ## What Is Quality Clouds?
 
-<p><strong>Quality Clouds is the AI-powered governance layer</strong> built for enterprise platforms, starting with Salesforce.</p>
+<p><strong>Quality Clouds is the AI-powered governance layer</strong> built for enterprise platforms, starting with Salesforce & ServiceNow.</p>
 <p>We go beyond generic code checks by scanning platform-specific configurations, metadata, and code against your org’s quality and compliance KPIs.</p>
 <p>Trusted by <strong>Fortune 500 teams</strong>, Quality Clouds helps developers, architects, and release managers catch issues early, enforce standards automatically, and ship with confidence- now directly from GitHub.</p>
 
@@ -34,7 +34,7 @@
 
 <p>Most linters catch syntax and formatting issues. But:</p>
 <ul>
-  <li>They don’t understand Salesforce.</li>
+  <li>They don’t understand Salesforce or ServiceNow.</li>
   <li>They miss metadata risks, naming violations, and org-specific rules that can break releases..</li>
 </ul>
 
@@ -174,7 +174,7 @@ jobs:
 
 ## What You’ll See That Others Don’t
 
-Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce, not just syntax.
+Quality Clouds Build Check gives you visibility that generic linters miss, because it understands Salesforce & ServiceNow, not just syntax.
 <ul>
   <li><strong>Automated Branch Scans</strong> – Automatically trigger code and configuration scans on every pull request.  
 .</li>
@@ -184,7 +184,7 @@ Quality Clouds Build Check gives you visibility that generic linters miss, becau
   <li><strong>Context-Aware Feedback</strong> – Developers get real-time insights where they code, improving quality and learning on the go.</li>
   <li><strong>Simple API-Key Setup</strong> – Connect securely in minutes, no complex setup or switching tools.</li>
 
-This is quality governance, not just linting. And it’s built for how Salesforce teams actually work.
+This is quality governance, not just linting. And it’s built for how Salesforce & ServiceNow teams actually work.
 </ul>
 
 ## Get Started in Under a Minute
