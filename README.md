@@ -123,6 +123,11 @@ This GitHub Action is built to extend the value of your existing platform govern
       <td><code>true</code> shows blockers + non-blockers. Only used in <code>cloud</code> mode.</td>
     </tr>
     <tr>
+      <td><code>Cloud</code></td>
+      <td>Optional</td>
+      <td>Set <code>cloud: servicenow</code> if the branch targets a ServiceNow repo. Defaults is set to <code>Salesforce</code> .</td>
+    </tr>
+    <tr>
       <td><code>gitHubToken</code></td>
       <td>Optional</td>
       <td>Only used if<code>review</code> is <code>true</code>.</td>
