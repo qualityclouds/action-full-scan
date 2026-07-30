@@ -48,4 +48,4 @@ Requires a Quality Clouds license. Existing customers: generate an API key in th
 
 ---
 
-Built by [Quality Clouds](https://qualityclouds.ai), governing enterprise platforms since 2015.
+Built by [Quality Clouds](https://qualityclouds.ai), governing enterprise platforms since 2017.
