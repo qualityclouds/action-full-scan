@@ -36,7 +36,7 @@ The `permissions: pull-requests: write` block is required for `review: true` to 
 
 ## Authentication
 
-Requires a Quality Clouds license. Existing customers: generate an API key in the [Admin Portal](https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/) and store it as a repository secret. The secret name is up to you: `QC_TOKEN` above is just an example, match it to whatever you name the secret in your repository settings. New to Quality Clouds: [get in touch](https://marketing.qualityclouds.com/meet-quality-clouds) to set up a plan for your team.
+Requires a Quality Clouds license. Existing customers: generate an API key in the [Admin Portal](https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/) and store it as a repository secret. The secret name is up to you: `QC_TOKEN` above is just an example, match it to whatever you name the secret in your repository settings. New to Quality Clouds: [get in touch](https://github.com/qualityclouds/community/discussions) to set up a plan for your team.
 
 ## What it does
 
