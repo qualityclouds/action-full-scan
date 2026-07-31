@@ -6,21 +6,37 @@ GitHub Action that scans your Salesforce or ServiceNow pull requests against Qua
 
 ## Install
 
+Add a workflow file, for example `.github/workflows/quality-clouds.yml`:
+
 ```yaml
-- name: Quality Clouds Scan
-  uses: qualityclouds/action-full-scan@2.0.0
-  with:
-    mode: cloud
-    token: ${{ secrets.QC_TOKEN }}
-    review: true
-    allIssues: true
-    gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-    pr_fails_on_blockers: true
+name: Quality Clouds
+on:
+  pull_request:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Quality Clouds Scan
+        uses: qualityclouds/action-full-scan@2.0.0
+        with:
+          mode: cloud
+          token: ${{ secrets.QC_TOKEN }}
+          review: true
+          allIssues: true
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          pr_fails_on_blockers: true
 ```
+
+The `permissions: pull-requests: write` block is required for `review: true` to post inline PR comments; without it, comments silently fail to post.
 
 ## Authentication
 
-Requires a Quality Clouds license. Existing customers: generate an API key in the [Admin Portal](https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/) and store it as a repository secret. New to Quality Clouds: [get in touch](https://marketing.qualityclouds.com/meet-quality-clouds) to set up a plan for your team.
+Requires a Quality Clouds license. Existing customers: generate an API key in the [Admin Portal](https://qualityclouds.com/documentation/qc/admin-portal-overview/administering-api-keys/) and store it as a repository secret. The secret name is up to you: `QC_TOKEN` above is just an example, match it to whatever you name the secret in your repository settings. New to Quality Clouds: [get in touch](https://marketing.qualityclouds.com/meet-quality-clouds) to set up a plan for your team.
 
 ## What it does
 
@@ -34,7 +50,7 @@ Requires a Quality Clouds license. Existing customers: generate an API key in th
 | `allIssues` | No | Set `true` to show blockers and non-blockers. Only used in `cloud` mode. |
 | `codequality` | No | Set `true` to generate a code-quality JSON report. Only used in `local` mode. |
 | `gitHubToken` | No | Required if `review` is `true`. |
-| `pr_fails_on_blockers` | No | Required if `review` is `true`. Fails the PR check when the Quality Gate doesn't pass. |
+| `pr_fails_on_blockers` | No | Required if `review` is `true`. Fails the PR check when the Quality Gate doesn't pass. Quality Gate thresholds are configured in your Quality Clouds workspace, not in this action. |
 
 ## Links
 
