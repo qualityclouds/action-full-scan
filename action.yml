@@ -1,5 +1,5 @@
 name: 'Quality Clouds Build Check for Salesforce'
-description: 'Quality Clouds Build Check for Salesforce'
+description: 'Quality Clouds Build Check for Salesforce and ServiceNow'
 branding:
   icon: 'cloud'
   color: 'blue'
@@ -8,29 +8,38 @@ inputs:
     description: 'You need to provide a valid API key to connect the Quality Clouds ruleset against which your code will be checked'
     required: true
   mode:
-    description: 'Use cloud mode to runh a Feature branch scan'
+    description: 'local (default) scans the zip file in zip_path. cloud runs a feature branch scan of the branch the action runs on'
+    required: false
+  cloud:
+    description: 'salesforce (default) or servicenow. Also accepts 2 (Salesforce) or 1 (ServiceNow)'
     required: false
   url_id:
-    description: 'The instance Id. Required when cloud mode is enabled.'
+    description: 'The instance Id. Optional: if empty, the repository URL identifies the instance'
+    required: false
+  zip_path:
+    description: 'Only used if mode == local. Required. Path to the zip file to scan'
+    required: false
+  codequality:
+    description: 'Has no effect in GitHub: the results are in the job log and, with review, in the pull request review'
     required: false
   api_url:
-    description: 'Use cloud mode to runh a Feature branch scan'
+    description: 'Quality Clouds API base URL. Optional'
     required: false
   version:
-    description: 'Customize runner version'
+    description: 'Tag of the Quality Clouds scanner image. default latest'
     required: false
   review:
     description: 'Only used if mode == cloud. Boolean. default False. If True, scan will create a pull request review with inline comments with the issues '
     required: false
   pr_fails_on_blockers:
     description: 'Only used if mode == cloud. Boolean. default False. Determine if the PR should be marked as failed when the Quality Gate does not pass.'
-    required: false    
+    required: false
   allIssues:
     description: 'Only used if mode == cloud. Boolean. default False. If True, scan results will show blockers and no blocker issues'
-    required: false    
+    required: false
   gitHubToken:
-    description: 'Only used if review == True. secrets.GITHUB_TOKEN' 
+    description: 'Only used if review == True. secrets.GITHUB_TOKEN'
     required: false
 runs:
-  using: 'node12'
+  using: 'node24'
   main: 'dist/index.js'
