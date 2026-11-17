@@ -14,6 +14,7 @@ on:
   pull_request:
 
 permissions:
+  contents: read
   pull-requests: write
 
 jobs:
@@ -22,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Quality Clouds Scan
-        uses: qualityclouds/action-full-scan@2.0.0
+        uses: qualityclouds/action-full-scan@2.3.0
         with:
           mode: cloud
           token: ${{ secrets.QC_TOKEN }}
@@ -32,7 +33,7 @@ jobs:
           pr_fails_on_blockers: true
 ```
 
-The `permissions: pull-requests: write` block is required for `review: true` to post inline PR comments; without it, comments silently fail to post.
+The `pull-requests: write` permission is required for `review: true` to post inline PR comments; without it, comments silently fail to post. Once a `permissions` block is set, the permissions it does not list are removed, so keep `contents: read` for `actions/checkout`.
 
 ## Authentication
 
@@ -45,12 +46,15 @@ Requires a Quality Clouds license. Existing customers: generate an API key in th
 | `token` | Yes | API key used to connect your Quality Clouds ruleset. |
 | `mode` | No | `local` (default) scans a given zip file. `cloud` scans the branch the action runs on. |
 | `cloud` | No | Set to `servicenow` for a ServiceNow repo. Defaults to Salesforce. |
-| `zip_path` | No | Path to the zip file to scan. Only used in `local` mode. |
+| `url_id` | No | Quality Clouds instance id. If empty, the repository URL identifies the instance. |
+| `zip_path` | In `local` mode | Path to the zip file to scan. Only used in `local` mode. |
 | `review` | No | Set `true` to add inline PR comments. Only used in `cloud` mode. |
 | `allIssues` | No | Set `true` to show blockers and non-blockers. Only used in `cloud` mode. |
-| `codequality` | No | Set `true` to generate a code-quality JSON report. Only used in `local` mode. |
-| `gitHubToken` | No | Required if `review` is `true`. |
-| `pr_fails_on_blockers` | No | Required if `review` is `true`. Fails the PR check when the Quality Gate doesn't pass. Quality Gate thresholds are configured in your Quality Clouds workspace, not in this action. |
+| `gitHubToken` | If `review` is `true` | Token used to post the PR review, usually `${{ secrets.GITHUB_TOKEN }}`. |
+| `pr_fails_on_blockers` | No | Set `true` to fail the check on pull requests when the Quality Gate doesn't pass. Only used in `cloud` mode. Quality Gate thresholds are configured in your Quality Clouds workspace, not in this action. |
+| `version` | No | Tag of the Quality Clouds scanner image. Defaults to `latest`. |
+| `api_url` | No | Quality Clouds API base URL. Only needed if Quality Clouds support gives you one. |
+| `codequality` | No | Has no effect in GitHub: the results are in the job log and, with `review`, in the PR review. |
 
 ## Links
 

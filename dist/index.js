@@ -18855,7 +18855,8 @@ async function run() {
        
         let branch = ref.replace("refs/heads/", "")
 
-        if(mode == null) mode = "local";
+        // getInput returns "" (not null) when the input is not set
+        if(!mode) mode = "local";
 
         let version = core.getInput('version');
         if(!version) {
